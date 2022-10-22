@@ -1,0 +1,14 @@
+System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver.exe");
+        WebDriver driver=new ChromeDriver();
+        driver.manage().window().maximize();
+        driver.get("https://demo.actitime.com/login.do");
+        
+       String value1 = driver.findElement(By.name("pwd")).getAttribute("type");
+           
+           System.out.println(value1.isEmpty());
+           if(value1.isEmpty()) {
+        	   System.out.println("Pass:Attribut value is not present");
+           }
+           else {
+        	   System.out.println("Fail: Attribut value is present");
+           }
